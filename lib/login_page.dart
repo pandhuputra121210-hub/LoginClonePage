@@ -29,16 +29,16 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Container(
               margin: EdgeInsets.all(10),
-              child: CustomTextfield(
-                txtContoller: txtUsername,
-                hint: "input username",
+              child: EditingTextfield(
+                txtcontroller: txtUsername,
+                myhint: "input username",
               ),
             ),
             Container(
               margin: EdgeInsets.all(10),
-              child: CustomTextfield(
-                txtContoller: txtPassword,
-                hint: "input password",
+              child: EditingTextfield(
+                txtcontroller: txtPassword,
+                myhint: "input password",
               ),
             ),
             Row(

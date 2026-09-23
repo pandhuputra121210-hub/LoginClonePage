@@ -7,48 +7,68 @@ class KalkulatorPage extends StatefulWidget {
   State<KalkulatorPage> createState() => _KalkulatorPageState();
 }
 
-class _KalkulatorPageState extends State<KalkulatorPage> {
+class  _KalkulatorPageState extends State<KalkulatorPage> {
   @override
   Widget build(BuildContext context) {
-
-    
-    return Scaffold(
+   return Scaffold(
       appBar: AppBar(
-        title: const Text('Kalkulator'),
-        centerTitle: true,
+        title: const Text("Kalkulator Page"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Text(
-                '0',
-                textAlign: TextAlign.right,
-                style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+      body: Column(
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              "Welcome to application",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 79, 1, 118),
               ),
             ),
-            const SizedBox(height: 20),
-
-            
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton(onPressed: () {}, child: const Text('+')),
-                ElevatedButton(onPressed: () {}, child: const Text('-')),
-                ElevatedButton(onPressed: () {}, child: const Text('*')),
-                ElevatedButton(onPressed: () {}, child: const Text('/')),
-              ],
-            ),
-          ],
-        ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Bungkus dengan Expanded agar lebarnya terikat (bounded) dan tidak stuck
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.all(10),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      hintText: "Number 1",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.all(10),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      hintText: "Number 2",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(onPressed: () {}, child: const Text("+")),
+              const SizedBox(width: 8),
+              ElevatedButton(onPressed: () {}, child: const Text("-")),
+              const SizedBox(width: 8),
+              ElevatedButton(onPressed: () {}, child: const Text("×")),
+              const SizedBox(width: 8),
+              ElevatedButton(onPressed: () {}, child: const Text("/")),
+            ],
+          )
+        ],
       ),
     );
   }

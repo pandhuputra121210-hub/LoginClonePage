@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutterujicoba/kalkulator_page.dart';
 import 'package:flutterujicoba/login_page.dart';
 import 'package:flutterujicoba/pages/login_clone_page.dart';
 import 'package:flutterujicoba/tiktok_page.dart';
+import 'package:flutterujicoba/kalkulator2-page.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -33,7 +36,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home : LoginClonePage(),
+      home : Kalkulator2Page(),
     );
   }
 }
