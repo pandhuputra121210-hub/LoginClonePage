@@ -25,7 +25,7 @@ class Kalkulator2Page extends StatelessWidget {
           EditingTextfield(txtcontroller: txtAngka1, myhint: "input angka 1"),
           EditingTextfield(txtcontroller: txtAngka2, myhint: "input angka 2"),
           
-          // Tombol-tombol dibuat horizontal dengan Row
+          
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -35,7 +35,7 @@ class Kalkulator2Page extends StatelessWidget {
                   foregroundColor: Colors.white,
                 ),
                 onPressed: () {
-                  // panggil method tambah di controller
+                  
                   double angka1 = double.parse(txtAngka1.text);
                   double angka2 = double.parse(txtAngka2.text);
                   controller.tambah(angka1, angka2);
@@ -93,7 +93,7 @@ class Kalkulator2Page extends StatelessWidget {
             ],
           ),
 
-          // Obx tetap ada untuk memantau perubahan hasil secara otomatis
+          
           Obx(
             () => Text(
               controller.hasil.toString(),
